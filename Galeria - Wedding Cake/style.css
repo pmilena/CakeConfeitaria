@@ -1,0 +1,215 @@
+:root {
+  --main-background-color: rgb(171, 126, 30);
+  --secondary-background-color: rgb(236, 242, 249);
+  --primary-text-color: rgb(66, 5, 66);
+  --secondary-text-color: rgb(187, 106, 187);
+  --link-text-color: rgb(66, 5, 66);
+  --link-hover-color: color-mix(in srgb, rgb(171, 126, 30), white 50%);
+  --button-border-color: rgb(66, 5, 66);
+  --button-background-color: linear-gradient(to bottom, rgb(171, 126, 30), rgb(236, 242, 249));
+}
+
+html {
+  font-family: Roboto;
+}
+
+.header {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, var(--main-background-color), var(--secondary-background-color));
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.header_logo {
+  width: 5em;
+  height: auto;
+  padding: 1.2rem 0 .5rem; 
+  box-sizing: border-box; 
+}
+
+.header-nav {
+  display: none;   
+}
+
+.header-nav.show {
+  display: block;
+}
+
+.header-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  font-size: .7rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  display: block;
+  padding: 1em .6em;
+  box-sizing: border-box;
+}
+
+.header-nav a:hover {
+  background-color: var(--link-hover-color);
+  color: var(--secondary-text-color);
+}
+
+#hamburger {
+  background-color: var(--secondary-background-color);
+  display: block;
+  width: 100%;
+  color: var(--secondary-background-color);
+  cursor: pointer;
+  font-size: 1.8rem;
+  box-sizing: border-box;
+}
+
+.menu {
+  border-radius: transparent 1px solid;
+  border-radius: .1em;
+  background-color: rgb(51, 47, 51);
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bg {
+  background-image: url(imagens/image13084.png);
+  background-position: center top;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 115px;
+}
+
+.content_container {
+  background-color: var(--main-background-color);
+  display: flex;
+  justify-content: center;
+  padding: 1.2em;
+}
+
+.btn_trailer {
+  text-decoration: none;
+  color: var(--link-text-color);
+  display: block;
+  border: var(--button-border-color) 2px solid;
+  border-radius: 1.5em;
+  padding: .6em;
+  width: max-content;
+  font-size: 1em;
+}
+
+#btnDirecionar button {
+  display: none;
+}
+
+.footer {
+  text-align: center;
+  padding: .5em;
+  background-color: var(--secondary-background-color);
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  width: 2em;
+  padding-top: 1em;
+}
+
+.footer p {
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+@media screen and (min-width: 32em) {
+  .bg {
+      background-image: url(imagens/bolo.png);
+      height: 100vh;
+      padding-bottom: 15em;
+      background-size: cover;
+      background-position: center left;
+      margin-top: 2em;
+  }
+
+  .header-nav {
+      display: block;
+  }
+
+  #hamburger {
+      display: none;
+  }
+
+  .header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; 
+      background-image: linear-gradient(to bottom, var(--main-background-color), var(--secondary-background-color));
+  }
+
+  #itens_menu {
+      margin-right: 2em;
+  }
+
+  #itens_menu li {
+      display: inline-block;
+  }
+
+  .top-header {
+      margin-left: 2em;
+  }
+
+  .header-nav a:hover {
+      outline: var(--button-border-color) 2px solid;
+      background-color: transparent;
+      color: white;
+      border-radius: 1em;
+  }
+
+  .button {
+      display: block;
+      margin: auto;
+      margin-top: 50vh;
+      border-radius: 1em;
+      box-shadow: 2px 2px 5px white;
+      border: solid 2px var(--button-border-color);
+      padding: .8em 1em;
+      background-image: var(--button-background-color);
+      color: var(--link-text-color);
+      font-size: 1.5em;
+      cursor: pointer;
+  }
+
+  .content_container {
+      display: none;
+  }
+
+  .footer .icons {
+      flex-direction: row;
+      gap: 1em;
+  }
+
+  .icons a {
+      display: inline-block;
+      padding: 0 1
+  }
